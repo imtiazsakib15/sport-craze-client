@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
   return (
-    <div className="bg-blue-900 w-full h-screen">
+    <div className="w-full h-screen">
       <NavBar />
       <Outlet />
     </div>

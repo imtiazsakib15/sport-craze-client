@@ -12,11 +12,11 @@ import { NAV_LINKS } from "@/constants/navbar.constant";
 
 const NavBar = () => {
   return (
-    <div className="bg-white py-3 lg:py-4">
+    <div className="bg-white py-3 lg:py-4 border-b shadow-md">
       <Container>
         <div className="flex justify-between">
           <Link to={"/"}>
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
+            <h3 className="text-2xl sm:text-3xl font-semibold">
               Sport<span className="text-blue-900">Craze</span>
             </h3>
           </Link>
