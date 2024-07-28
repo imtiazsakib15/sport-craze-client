@@ -9,7 +9,7 @@ const FeaturedProducts = () => {
   const products: TProduct[] = data?.data;
 
   return (
-    <div className="py-10">
+    <div className="py-6 sm:py-8 md:py-10">
       <Container>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl text-center leading-tight font-bold">
           Featured Products
