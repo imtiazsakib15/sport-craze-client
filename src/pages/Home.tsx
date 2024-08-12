@@ -1,7 +1,6 @@
 import AllCategory from "@/components/AllCategory";
 import ContactUs from "@/components/ContactUs";
 import FeaturedProducts from "@/components/FeaturedProducts";
-import Footer from "@/components/Footer";
 import Slider from "@/components/Slider";
 
 const Home = () => {
@@ -11,7 +10,6 @@ const Home = () => {
       <FeaturedProducts />
       <AllCategory />
       <ContactUs />
-      <Footer />
     </>
   );
 };
