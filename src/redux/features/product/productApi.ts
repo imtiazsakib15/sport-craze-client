@@ -10,7 +10,7 @@ const productApi = baseApi.injectEndpoints({
     }),
     getAllProducts: builder.query({
       query: (filterParams: string) => ({
-        url: `/products${filterParams}`,
+        url: filterParams ? `/products${filterParams}` : "/products",
         method: "GET",
       }),
     }),
