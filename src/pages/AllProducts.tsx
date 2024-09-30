@@ -35,38 +35,82 @@ const AllProducts = () => {
   return (
     <>
       <Container>
-        <div className="flex justify-between items-center pt-4 sm:pt-6 lg:pt-8">
-          <Select
-            onValueChange={(category) =>
-              navigate(`/all-products?category=${category}`)
-            }
-          >
-            <SelectTrigger className="w-60">
-              <SelectValue placeholder="Select a category" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="cricket">Cricket</SelectItem>
-              <SelectItem value="football">Football</SelectItem>
-              <SelectItem value="hockey">Hockey</SelectItem>
-              <SelectItem value="tennis">Tennis</SelectItem>
-              <SelectItem value="basketball">Basketball</SelectItem>
-              <SelectItem value="archery">Archery</SelectItem>
-            </SelectContent>
-          </Select>
+        <div className="flex flex-col lg:flex-row w-full gap-5 pt-4 sm:pt-6 lg:pt-8">
+          <div className="flex flex-col sm:flex-row w-full gap-5">
+            {/* Search by category */}
+            <Select
+              onValueChange={(category) =>
+                navigate(`/all-products?category=${category}`)
+              }
+            >
+              <SelectTrigger className="">
+                <SelectValue placeholder="Search by category" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="cricket">Cricket</SelectItem>
+                <SelectItem value="football">Football</SelectItem>
+                <SelectItem value="hockey">Hockey</SelectItem>
+                <SelectItem value="tennis">Tennis</SelectItem>
+                <SelectItem value="basketball">Basketball</SelectItem>
+                <SelectItem value="archery">Archery</SelectItem>
+              </SelectContent>
+            </Select>
 
-          <form
-            onSubmit={handleSearch}
-            className="relative w-full max-w-xs items-center space-x-2"
-          >
-            <Input name="name" type="text" placeholder="Product Name" />
-            <button className="absolute right-2.5 top-2.5 cursor-pointer text-gray-600">
-              <Search className="size-5" />
-            </button>
-          </form>
+            {/* Search by rating */}
+            <Select
+              onValueChange={(rating) =>
+                navigate(`/all-products?rating=${rating}`)
+              }
+            >
+              <SelectTrigger className="">
+                <SelectValue placeholder="Search by rating" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="0">0</SelectItem>
+                <SelectItem value="0.5">0.5</SelectItem>
+                <SelectItem value="1">1</SelectItem>
+                <SelectItem value="1.5">1.5</SelectItem>
+                <SelectItem value="2">2</SelectItem>
+                <SelectItem value="2.5">2.5</SelectItem>
+                <SelectItem value="3">3</SelectItem>
+                <SelectItem value="3.5">3.5</SelectItem>
+                <SelectItem value="4">4</SelectItem>
+                <SelectItem value="4.5">4.5</SelectItem>
+                <SelectItem value="5">5</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
 
+          <div className="flex flex-col sm:flex-row w-full gap-5">
+            {/* Sort by price */}
+            <Select
+              onValueChange={(sort) => navigate(`/all-products?sort=${sort}`)}
+            >
+              <SelectTrigger className="">
+                <SelectValue placeholder="Sort by price" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="-price">High to low</SelectItem>
+                <SelectItem value="price">Low to high</SelectItem>
+              </SelectContent>
+            </Select>
+
+            {/* Search by name */}
+            <form
+              onSubmit={handleSearch}
+              className="relative w-full  items-center space-x-2"
+            >
+              <Input name="name" type="text" placeholder="Search by name" />
+              <button className="absolute right-2.5 top-2.5 cursor-pointer text-gray-600">
+                <Search className="size-5" />
+              </button>
+            </form>
+          </div>
+
+          {/* Clear filter */}
           <button
             onClick={() => navigate("/all-products")}
-            className="px-4 py-2 border rounded-md hover:bg-slate-100"
+            className="px-3 py-2 border rounded-md bg-red-500 hover:bg-red-600 text-white font-medium  shrink-0 w-max ms-auto"
           >
             Clear Filter
           </button>
