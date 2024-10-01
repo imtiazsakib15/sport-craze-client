@@ -28,7 +28,7 @@ const AllProducts = () => {
     const form = e.currentTarget;
     const formData = new FormData(form);
     const name = formData.get("name");
-    navigate(`/all-products?searchTerm=${name}`);
+    navigate(`/products?searchTerm=${name}`);
     form.reset();
   };
 
@@ -40,7 +40,7 @@ const AllProducts = () => {
             {/* Search by category */}
             <Select
               onValueChange={(category) =>
-                navigate(`/all-products?category=${category}`)
+                navigate(`/products?category=${category}`)
               }
             >
               <SelectTrigger className="">
@@ -58,9 +58,7 @@ const AllProducts = () => {
 
             {/* Search by rating */}
             <Select
-              onValueChange={(rating) =>
-                navigate(`/all-products?rating=${rating}`)
-              }
+              onValueChange={(rating) => navigate(`/products?rating=${rating}`)}
             >
               <SelectTrigger className="">
                 <SelectValue placeholder="Search by rating" />
@@ -84,7 +82,7 @@ const AllProducts = () => {
           <div className="flex flex-col sm:flex-row w-full gap-5">
             {/* Sort by price */}
             <Select
-              onValueChange={(sort) => navigate(`/all-products?sort=${sort}`)}
+              onValueChange={(sort) => navigate(`/products?sort=${sort}`)}
             >
               <SelectTrigger className="">
                 <SelectValue placeholder="Sort by price" />
@@ -109,7 +107,7 @@ const AllProducts = () => {
 
           {/* Clear filter */}
           <button
-            onClick={() => navigate("/all-products")}
+            onClick={() => navigate("/products")}
             className="px-3 py-2 border rounded-md bg-red-500 hover:bg-red-600 text-white font-medium  shrink-0 w-max ms-auto"
           >
             Clear Filter

@@ -13,7 +13,7 @@ const AllCategory = () => {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-6">
           {categories?.map((category: TCategory) => (
             <Link
-              to={`/all-products?category=${category.name.toLowerCase()}`}
+              to={`/products?category=${category.name.toLowerCase()}`}
               key={category.name}
               className="group border border-blue-700 rounded-full aspect-square flex flex-col justify-center items-center p-5 overflow-hidden"
             >

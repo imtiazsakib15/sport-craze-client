@@ -46,7 +46,7 @@ const Footer = () => {
               <p>
                 <Link
                   className="inline-flex gap-x-2 text-gray-300 hover:text-gray-200"
-                  to="/all-products"
+                  to="/products"
                 >
                   All Products
                 </Link>

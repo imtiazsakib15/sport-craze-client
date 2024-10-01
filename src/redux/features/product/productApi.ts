@@ -8,13 +8,25 @@ const productApi = baseApi.injectEndpoints({
         method: "GET",
       }),
     }),
+
     getAllProducts: builder.query({
       query: (filterParams: string) => ({
         url: filterParams ? `/products${filterParams}` : "/products",
         method: "GET",
       }),
     }),
+
+    getSingleProduct: builder.query({
+      query: (id: string) => ({
+        url: `/products/${id}`,
+        method: "GET",
+      }),
+    }),
   }),
 });
 
-export const { useGetLatestProductsQuery, useGetAllProductsQuery } = productApi;
+export const {
+  useGetLatestProductsQuery,
+  useGetAllProductsQuery,
+  useGetSingleProductQuery,
+} = productApi;

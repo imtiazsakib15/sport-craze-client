@@ -38,7 +38,7 @@ const Slider = () => {
                 sports shoes
               </h1>
               <Button>
-                <Link to={"/all-products"}>Shop Now</Link>
+                <Link to={"/products"}>Shop Now</Link>
               </Button>
             </div>
             <div className="flex-1 h-full">
@@ -61,7 +61,7 @@ const Slider = () => {
                 Check out the latest collection of cricket bats
               </h1>
               <Button>
-                <Link to={"/all-products"}>Explore Now</Link>
+                <Link to={"/products"}>Explore Now</Link>
               </Button>
             </div>
             <div className="flex-1 h-full">
@@ -85,7 +85,7 @@ const Slider = () => {
                 equipment
               </h1>
               <Button>
-                <Link to={"/all-products"}>Shop Now</Link>
+                <Link to={"/products"}>Shop Now</Link>
               </Button>
             </div>
             <div className="flex-1 h-full">
