@@ -4,12 +4,14 @@ import AllProducts from "@/pages/AllProducts";
 import Cart from "@/pages/Cart";
 import Home from "@/pages/Home";
 import ManageProducts from "@/pages/ManageProducts";
+import NotFound from "@/pages/NotFound";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <NotFound />,
     children: [
       {
         index: true,
