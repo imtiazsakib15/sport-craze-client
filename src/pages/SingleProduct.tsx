@@ -1,5 +1,5 @@
+import AddToCartButton from "@/components/AddToCartButton";
 import Container from "@/components/Container";
-import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useGetSingleProductQuery } from "@/redux/features/product/productApi";
 import { TProduct } from "@/types";
@@ -64,9 +64,9 @@ const SingleProduct = () => {
                 Description:
               </p>
               <p>{product.description}</p>
-              <Button className="bg-green-700 hover:bg-green-600 mt-5 sm:mt-6 lg:mt-8">
-                Add to Cart
-              </Button>
+              <div className="mt-5 sm:mt-6 lg:mt-8">
+                <AddToCartButton id={product._id} />
+              </div>
             </>
           )}
         </div>

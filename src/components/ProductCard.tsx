@@ -1,9 +1,9 @@
 import { TProduct } from "@/types/product.type";
-import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import ReactStars from "react-stars";
 import { ArrowRight } from "lucide-react";
+import AddToCartButton from "./AddToCartButton";
 
 const ProductCard = (product: TProduct) => {
   const { _id, name, category, price, image, quantity, rating } = product;
@@ -44,9 +44,8 @@ const ProductCard = (product: TProduct) => {
           >
             View Details <ArrowRight className="size-5" />
           </Link>
-          <Button className="bg-green-700 hover:bg-green-600">
-            Add to Cart
-          </Button>
+
+          <AddToCartButton id={_id} />
         </div>
       </div>
     </div>
