@@ -7,13 +7,16 @@ import { Provider } from "react-redux";
 import { persistor, store } from "./redux/store.ts";
 import { Toaster } from "@/components/ui/toaster";
 import { PersistGate } from "redux-persist/integration/react";
+import { PhotoProvider } from "react-photo-view";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <RouterProvider router={router} />
-        <Toaster />
+        <PhotoProvider>
+          <RouterProvider router={router} />
+          <Toaster />
+        </PhotoProvider>
       </PersistGate>
     </Provider>
   </React.StrictMode>
