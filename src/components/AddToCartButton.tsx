@@ -39,7 +39,6 @@ const AddToCartButton = ({
             price,
           })
         }
-        className="bg-green-700 hover:bg-green-600"
       >
         Add to Cart
       </Button>
