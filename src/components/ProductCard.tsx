@@ -45,7 +45,7 @@ const ProductCard = (product: TProduct) => {
             View Details <ArrowRight className="size-5" />
           </Link>
 
-          <AddToCartButton id={_id} />
+          <AddToCartButton id={_id} name={name} price={price} />
         </div>
       </div>
     </div>

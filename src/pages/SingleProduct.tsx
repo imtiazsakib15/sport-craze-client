@@ -52,7 +52,11 @@ const SingleProduct = () => {
               </p>
               <p>{product.description}</p>
               <div className="mt-5 sm:mt-6 lg:mt-8">
-                <AddToCartButton id={product._id} />
+                <AddToCartButton
+                  id={product._id}
+                  name={product.name}
+                  price={product.price}
+                />
               </div>
             </>
           )}
