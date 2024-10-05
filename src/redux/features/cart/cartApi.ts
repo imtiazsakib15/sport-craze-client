@@ -9,6 +9,7 @@ const cartApi = baseApi.injectEndpoints({
         method: "POST",
         body: orderInfo,
       }),
+      invalidatesTags: ["products"],
     }),
   }),
 });

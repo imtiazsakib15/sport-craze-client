@@ -5,5 +5,6 @@ export const baseApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://sport-craze-server.vercel.app/api/v1",
   }),
+  tagTypes: ["products"],
   endpoints: () => ({}),
 });
