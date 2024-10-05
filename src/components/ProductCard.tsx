@@ -9,7 +9,7 @@ const ProductCard = (product: TProduct) => {
   const { _id, name, category, price, image, quantity, rating } = product;
 
   return (
-    <div className="border p-3 rounded-md">
+    <div data-aos="zoom-in" className="border p-3 rounded-md">
       <div className="relative">
         <img
           className="w-full aspect-video rounded-md"

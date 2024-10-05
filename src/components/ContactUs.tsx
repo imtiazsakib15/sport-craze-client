@@ -59,7 +59,7 @@ const ContactUs = () => {
                   control={form.control}
                   name="name"
                   render={({ field }) => (
-                    <FormItem>
+                    <FormItem data-aos="fade-up">
                       <FormLabel>Name</FormLabel>
                       <FormControl>
                         <Input {...field} />
@@ -73,7 +73,7 @@ const ContactUs = () => {
                   control={form.control}
                   name="email"
                   render={({ field }) => (
-                    <FormItem>
+                    <FormItem data-aos="fade-up">
                       <FormLabel>Email</FormLabel>
                       <FormControl>
                         <Input {...field} />
@@ -87,7 +87,7 @@ const ContactUs = () => {
                   control={form.control}
                   name="message"
                   render={({ field }) => (
-                    <FormItem>
+                    <FormItem data-aos="fade-up">
                       <FormLabel>Message</FormLabel>
                       <FormControl>
                         <Textarea {...field} />
@@ -96,7 +96,9 @@ const ContactUs = () => {
                     </FormItem>
                   )}
                 />
-                <Button type="submit">Submit</Button>
+                <Button data-aos="fade-up" type="submit">
+                  Submit
+                </Button>
               </form>
             </Form>
           </div>

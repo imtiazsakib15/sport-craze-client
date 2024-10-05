@@ -8,6 +8,10 @@ import { persistor, store } from "./redux/store.ts";
 import { Toaster } from "@/components/ui/toaster";
 import { PersistGate } from "redux-persist/integration/react";
 import { PhotoProvider } from "react-photo-view";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
