@@ -23,6 +23,7 @@ import { TContactFormField, TOrderDetails } from "@/types";
 import { useCreateOrderMutation } from "@/redux/features/cart/cartApi";
 import { clearCart, selectCart } from "@/redux/features/cart/cartSlice";
 import { toast } from "@/components/ui/use-toast";
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
   const form = useForm<z.infer<typeof CONTACT_FORM_SCHEMA>>({
@@ -32,6 +33,7 @@ const Checkout = () => {
   const [createOrder, { isLoading }] = useCreateOrderMutation();
   const dispatch = useAppDispatch();
   const cart = useAppSelector(selectCart);
+  const navigate = useNavigate();
 
   const onSubmit = async (data: z.infer<typeof CONTACT_FORM_SCHEMA>) => {
     try {
@@ -46,10 +48,8 @@ const Checkout = () => {
       };
       const result = await createOrder(orderDetails).unwrap();
       if (result?.success) {
-        toast({
-          title: result.message || "Order created successfully",
-        });
         dispatch(clearCart());
+        navigate("/success");
       }
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
