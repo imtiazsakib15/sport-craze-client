@@ -8,21 +8,22 @@ import {
   removeFromCart,
   selectCart,
 } from "@/redux/features/cart/cartSlice";
-import { useGetAllProductsQuery } from "@/redux/features/product/productApi";
 import { useAppSelector } from "@/redux/hooks";
 import { TCartItem } from "@/types";
 import { Trash2 } from "lucide-react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const cart = useAppSelector(selectCart);
   const dispatch = useDispatch();
-  const { data, isLoading } = useGetAllProductsQuery("");
-  console.log(cart?.cart, data?.data);
+  const navigate = useNavigate();
+
+  const cartItems = cart?.cart;
 
   let subTotal: number = 0;
 
-  cart?.cart?.forEach(
+  cartItems?.forEach(
     (product: TCartItem) => (subTotal += product.price * product.quantity)
   );
   const totalVat: number = subTotal * VAT_PERCENTAGE;
@@ -34,14 +35,14 @@ const Cart = () => {
         <h1 className="text-3xl sm:text-4xl lg:text-5xl text-center leading-tight font-bold">
           My Cart
         </h1>
-        {cart?.cart?.length === 0 && (
+        {cartItems?.length === 0 && (
           <p className="h-[50vh] flex justify-center items-center sm:text-lg font-semibold">
             Your cart is empty!
           </p>
         )}
-        {cart?.cart?.length > 0 && (
+        {cartItems?.length > 0 && (
           <div className="pt-5">
-            {cart.cart.map((item: TCartItem) => (
+            {cartItems.map((item: TCartItem) => (
               <div key={item.productId}>
                 <hr />
                 <div className="flex items-center gap-5 my-5">
@@ -129,7 +130,9 @@ const Cart = () => {
                   </p>
                 </div>
 
-                <Button className="mt-6">Proceed to checkout</Button>
+                <Button onClick={() => navigate("/checkout")} className="mt-6">
+                  Proceed to checkout
+                </Button>
               </div>
             </div>
           </div>

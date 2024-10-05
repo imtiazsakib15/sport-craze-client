@@ -2,6 +2,7 @@ import MainLayout from "@/layout/MainLayout";
 import AboutUs from "@/pages/AboutUs";
 import AllProducts from "@/pages/AllProducts";
 import Cart from "@/pages/Cart";
+import Checkout from "@/pages/Checkout";
 import Home from "@/pages/Home";
 import ManageProducts from "@/pages/ManageProducts";
 import NotFound from "@/pages/NotFound";
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "cart",
         element: <Cart />,
+      },
+      {
+        path: "checkout",
+        element: <Checkout />,
       },
     ],
   },

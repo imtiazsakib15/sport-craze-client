@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
@@ -16,9 +17,9 @@ const NotFound = () => {
 
         <Link
           to="/"
-          className="inline-block px-5 py-3 mt-6 text-sm font-medium text-white bg-green-700 rounded hover:bg-green-600 focus:outline-none focus:ring"
+          className="inline-block mt-6 text-sm font-medium rounded focus:outline-none focus:ring"
         >
-          Go to home page
+          <Button>Go to home page</Button>
         </Link>
       </div>
     </div>
