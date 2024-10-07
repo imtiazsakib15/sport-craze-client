@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Container from "./Container";
-import { categories } from "@/constants/category.constant";
+import { CATEGORIES } from "@/constants/category.constant";
 import { TCategory } from "@/types/category.type";
 
 const AllCategory = () => {
@@ -11,7 +11,7 @@ const AllCategory = () => {
           All Category
         </h1>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 pt-6">
-          {categories?.map((category: TCategory) => (
+          {CATEGORIES?.map((category: TCategory) => (
             <Link
               data-aos="zoom-in"
               to={`/products?category=${category.name.toLowerCase()}`}

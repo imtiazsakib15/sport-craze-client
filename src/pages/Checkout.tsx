@@ -73,6 +73,7 @@ const Checkout = () => {
           >
             {CONTACT_FORM_FIELDS.map((formField: TContactFormField) => (
               <FormField
+                key={formField.formLabel}
                 control={form.control}
                 name={formField.formName}
                 render={({ field }) => (

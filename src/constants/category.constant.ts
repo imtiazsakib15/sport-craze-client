@@ -1,6 +1,6 @@
 import { TCategory } from "@/types/category.type";
 
-export const categories: TCategory[] = [
+export const CATEGORIES: TCategory[] = [
   {
     name: "Cricket",
     image: "src/assets/images/cricket_logo.png",
