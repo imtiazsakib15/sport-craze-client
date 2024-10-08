@@ -12,7 +12,7 @@ const ProductCard = (product: TProduct) => {
     <div data-aos="zoom-in" className="border p-3 rounded-md">
       <div className="relative">
         <img
-          className="w-full aspect-video rounded-md"
+          className="w-full aspect-square object-cover rounded-md"
           src={image}
           alt={name}
         />
@@ -20,7 +20,7 @@ const ProductCard = (product: TProduct) => {
           ${price}
         </Badge>
       </div>
-      <div className="pt-3 space-y-1">
+      <div className="pt-4 space-y-1">
         <div className="flex justify-between items-center">
           <p className="text-xs bg-green-600 text-white font-medium px-2 py-1 rounded-md">
             {category}

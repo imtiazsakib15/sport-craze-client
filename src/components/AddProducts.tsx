@@ -122,10 +122,7 @@ const AddProducts = () => {
                       </FormControl>
                       <SelectContent>
                         {CATEGORIES.map((category: TCategory) => (
-                          <SelectItem
-                            key={category.name}
-                            value={category.name.toLowerCase()}
-                          >
+                          <SelectItem key={category.name} value={category.name}>
                             {category.name}
                           </SelectItem>
                         ))}

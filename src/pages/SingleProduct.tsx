@@ -27,7 +27,7 @@ const SingleProduct = () => {
               </h1>
               <PhotoView src={product.image}>
                 <img
-                  className="w-full max-w-2xl mx-auto aspect-video rounded-md cursor-pointer mt-4 sm:mt-6 lg:mt-8"
+                  className="w-full max-w-2xl mx-auto aspect-square rounded-md cursor-pointer mt-4 sm:mt-6 lg:mt-8"
                   src={product.image}
                   alt={product.name}
                 />
