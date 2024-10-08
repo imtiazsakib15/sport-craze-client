@@ -1,28 +1,34 @@
 import { TCategory } from "@/types/category.type";
+import cricketImg from "@/assets/images/cricket_logo.png";
+import footballImg from "@/assets/images/football_logo.jfif";
+import hockeyImg from "@/assets/images/hockey_logo.jfif";
+import tennisImg from "@/assets/images/tennis_logo.jfif";
+import basketballImg from "@/assets/images/basketball_logo.jfif";
+import archeryImg from "@/assets/images/archery_logo.png";
 
 export const CATEGORIES: TCategory[] = [
   {
     name: "Cricket",
-    image: "src/assets/images/cricket_logo.png",
+    image: cricketImg,
   },
   {
     name: "Football",
-    image: "src/assets/images/football_logo.jfif",
+    image: footballImg,
   },
   {
     name: "Hockey",
-    image: "src/assets/images/hockey_logo.jfif",
+    image: hockeyImg,
   },
   {
     name: "Tennis",
-    image: "src/assets/images/tennis_logo.jfif",
+    image: tennisImg,
   },
   {
     name: "Basketball",
-    image: "src/assets/images/basketball_logo.jfif",
+    image: basketballImg,
   },
   {
     name: "Archery",
-    image: "src/assets/images/archery_logo.png",
+    image: archeryImg,
   },
 ];
